@@ -13,46 +13,46 @@ int main() {
     char keyPress;
 
     do {
-        vector<int> chave;
-        vector<int> estrela;
+        vector<int> key;
+        vector<int> star;
 
-        // Chave
+        // KEY
 
         for (int i = 1; i <= 50; i++) {
             chave.push_back(i);
         }
 
-        shuffle(chave.begin(), chave.end(), rng);
-        sort(chave.begin(), chave.begin() + 5);
+        shuffle(key.begin(), key.end(), rng);
+        sort(key.begin(), key.begin() + 5);
 
-        cout << "Chave: ";
+        cout << "Key: ";
         for (int i = 0; i < 5; i++) {
-            cout << chave[i] << " "; 
+            cout << key[i] << " "; 
         }
 
-        // Estrelas
+        // STAR
 
         for (int i = 1; i <= 12; i++) {
-            estrela.push_back(i);
+            star.push_back(i);
         }
 
-        shuffle(estrela.begin(), estrela.end(), rng);
-        sort(estrela.begin(), estrela.begin() + 2); 
+        shuffle(star.begin(), star.end(), rng);
+        sort(star.begin(), star.begin() + 2); 
 
-        cout << "\nEstrelas: ";
+        cout << "\nStars: ";
         for (int i = 0; i < 2; i++) {
-            cout << estrela[i] << " "; 
+            cout << star[i] << " "; 
         }
 
-        // Outra chave
+        // Ask to play again
 
-        cout << "\nGostaria de originar outra chave? [s/n] ";
+        cout << "\nWould you like to generate a new key? [y/n] ";
         cin >> keyPress;
 
-        if (keyPress == 's') {
+        if (keyPress == 'y') {
             system("clear");
         } else if (keyPress == 'n') {
-            cout << "A fechar o jogo" << endl;
+            cout << "Closing the game..." << endl;
             break;
         }
     } while (true);

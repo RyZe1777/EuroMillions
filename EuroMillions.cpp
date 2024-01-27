@@ -19,7 +19,7 @@ int main() {
         // KEY
 
         for (int i = 1; i <= 50; i++) {
-            chave.push_back(i);
+            key.push_back(i);
         }
 
         shuffle(key.begin(), key.end(), rng);
